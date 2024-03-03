@@ -1,0 +1,13 @@
+body {
+    display: block;
+    justify-content: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+header {
+
+}
+
+.class {
+    color: blueviolet;
+}
