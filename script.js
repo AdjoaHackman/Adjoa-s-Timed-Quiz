@@ -74,6 +74,7 @@ setTimeout(1000)
 showNextQuestion()
 }
 
+
 QuizBtn.addEventListener("click", showNextQuestion);
 function showNextQuestion() {
     var currentquestion = listofquestions[questionindex]
@@ -82,7 +83,7 @@ function showNextQuestion() {
     questionelem.innerHTML = currentquestion.question
     
     showanswer(currentquestion,0)
-    //add event listener
+    //add event listener?
     showanswer(currentquestion,1)
     showanswer(currentquestion,2)
     showanswer(currentquestion,3)
@@ -90,22 +91,6 @@ function showNextQuestion() {
 
     // questionindex++;
 }
-// QuizBtn.addEventListener("click", showquestion);
-// function showquestion() {
-//     var currentquestion = listofquestions[questionindex]
-//     console.log(currentquestion.question)
-//     var questionelem = document.querySelector("#question")
-//     questionelem.innerHTML = currentquestion.question
-    
-//     showanswer(currentquestion,0)
-//     //add event listener
-//     showanswer(currentquestion,1)
-//     showanswer(currentquestion,2)
-//     showanswer(currentquestion,3)
-//     showanswer(currentquestion,4)
-
-//     questionindex++;
-// }
 var questionindex = 0;
 
 function showanswer(question,indexofanswer) {
@@ -117,10 +102,7 @@ function showanswer(question,indexofanswer) {
 
 }
 //  if showquestion.questionindex () {
-
 //  }
-
-
 
 //add event listener for moving to the next question, make take quiz separate from the questions (it needs to be shown separate), and then scoring - the logic for everything and local storage
 //to add a number to a string, all we have to do is add a plus sign, as referenced in line 53
@@ -129,11 +111,11 @@ function showanswer(question,indexofanswer) {
 // var answer2 = currentquestion.answers[2]
 // var answer3 = currentquestion.answers[3]
 // var answer4 = currentquestion.answers[4] 
-
-
 //I am trying to show the questions (per index) based on questions that I listed above
 
   // Use the `setInterval()` method to call a function to be executed every 1000 milliseconds
+  var timeLeft = 30
+  var timerEl = document.querySelector("#timer").innerHTML = timeLeft
   var timeInterval = setInterval(function () {
     // As long as the `timeLeft` is greater than 1
     if (timeLeft > 1) {
@@ -162,3 +144,12 @@ function showanswer(question,indexofanswer) {
 
 
   //
+
+//   localStorage.getItem(‘key’
+//     localStorage.setItem(‘key’, ‘value’), replacing ‘key’ for whatever the property name is and ‘value for whatever value you want to set
+
+//     var currentHighScore = localStorage.getItem(‘highScore’);
+
+//     if (score > currentHighScore) {
+//       localStorage.setItem(‘highScore’, score);
+//     }
