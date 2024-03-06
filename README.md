@@ -9,6 +9,10 @@ I am working on trying to make my code more readable because I am noticing how d
 
 I am also trying to re-use code so that I don't have to keep typing out new code.I did this a lot when trying to hide the Answer buttons and the Take Quiz button. During a tutoring session last week, my tutor suggested that I use the code from one of our activities for the timer, which was very helpful. I added a few functions - endgame and showNextQuestion - to the timer so that the timer will stop when the users time runs out/chooses too many wrong answers or shows the next question as the timer continues. 
 
+<img src="./Assets/Adjoa&apos;s Timed Quiz Screenshot-1.png">
+
+<img src="./Assets/Adjoa&apos;s Timed Quiz Screenshot-2.png">
+
 ## What did I Learn?
 Do one thing at a time. I had to figure out the questions first and then figure out the timer and then figure out the score page. One step at a time. It is difficult for me because I am so focused on getting to the finished product.
 
