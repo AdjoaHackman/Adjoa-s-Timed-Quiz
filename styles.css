@@ -18,12 +18,13 @@ main {
     border-radius: 10px;
     box-shadow: 0 3px 5px 2px;
 }
-/* this box was hard to figure out. I knew the justufy content, align items, text-align, background color, width, and padding but figuring out the border radius and box shadow was hard. I literally had to look for an example and then inspect the example to look for what the css looked like for the box. Special thanks to css-tricks.com for helping me figure this out https://css-tricks.com/snippets/css/css-box-shadow/ this was one of the many sources but this one helped the most*/
+/* this box was hard to figure out. I knew the justify content, align items, text-align, background color, width, and padding but figuring out the border radius and box shadow was hard. I had to look for an example and then inspect the example to look for what the css looked like for the box. Special thanks to css-tricks.com for helping me figure this out https://css-tricks.com/snippets/css/css-box-shadow/ this was one of the many sources but this one helped the most*/
 
 .button {
     font-family: "Madimi One", sans-serif;
     background-color: gold;
 }
+
 header {
 justify-content: center;
 }
@@ -32,6 +33,7 @@ justify-content: center;
     text-align: center;
     color:whitesmoke
 }
+
 .answer {
     font-family: "Madimi One", sans-serif;
     color: blueviolet;
@@ -40,8 +42,9 @@ justify-content: center;
 #timer {
     text-align: center;
     color: whitesmoke;
-/* I am definitely missing something but I am still trying to figure out how to color the word Time on the page since it is regular text in the HTML  */
 }
+
+/* I am definitely missing something but I am still trying to figure out how to color the word Time on the page since it is regular text in the HTML  */
 /* button #submit-initials {
     font-family: "Madimi One", sans-serif;
     color: black
