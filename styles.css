@@ -1,18 +1,66 @@
 body {
-    display: block;
+    display: flex;
     justify-content: center;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Madimi One", sans-serif;
+    flex-direction: column;
+    align-items: center;
+    background-color: darksalmon;
 }
 
+main {
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    max-width: 75%;
+    padding: 20px;
+    text-align: center;
+    background-color: darkcyan;
+    border-radius: 10px;
+    box-shadow: 0 3px 5px 2px;
+}
+/* this box was hard to figure out. I knew the justufy content, align items, text-align, background color, width, and padding but figuring out the border radius and box shadow was hard. I literally had to look for an example and then inspect the example to look for what the css looked like for the box. Special thanks to css-tricks.com for helping me figure this out https://css-tricks.com/snippets/css/css-box-shadow/ this was one of the many sources but this one helped the most*/
+
+.button {
+    font-family: "Madimi One", sans-serif;
+    background-color: gold;
+}
 header {
-
+justify-content: center;
 }
 
-.class {
+#question {
+    text-align: center;
+    color:whitesmoke
+}
+.answer {
+    font-family: "Madimi One", sans-serif;
     color: blueviolet;
 }
 
-#Timer {
+#timer {
+    text-align: center;
+    color: whitesmoke;
+/* I am definitely missing something but I am still trying to figure out how to color the word Time on the page since it is regular text in the HTML  */
+}
+/* button #submit-initials {
+    font-family: "Madimi One", sans-serif;
+    color: black
+}
 
-    
+main div button #submit-initials {
+    font-family: "Madimi One", sans-serif;
+    color: black
+} */
+
+#submit-initials {
+    font-family: "Madimi One", sans-serif;
+    color: black;
+}
+
+#initials-page p {
+    color: whitesmoke;
+}
+
+#score-page {
+    color: whitesmoke;
 }

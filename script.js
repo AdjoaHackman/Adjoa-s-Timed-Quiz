@@ -5,28 +5,28 @@
 var listofquestions = [
     {
         question:"What is JavaScript?",
-        answers: ["programming language","abcdef","bcdefg","cdefgh","defghi"],
-        correctanswer: "programming language"
+        answers: ["object-oriented programming language","a library","general purpose programming language","styling sheet language","a database"],
+        correctanswer: "object-oriented programming language"
     },
     {
-        question:"What Beyonce's last album?",
-        answers: ["Act I: Renaissance","Act II","Beyonce","Lemonade","Sasha Fierce"],
-        correctanswer: "Act I: Renaissance"
+        question:"Arrays are commonly enclosed in:",
+        answers: ["angle brackets","quotes","square brackets","curly brackets","parenthesis"],
+        correctanswer: "square brackets"
     },
     {
-        question:"Who won album of the year at the 2024 Grammy Awards?",
-        answers: ["Janelle Monae","Beyonce","Taylor Swift","Jon Batiste","SZA"],
-        correctanswer: "Taylor Swift"
+        question:"In JavaScript, what would you use to avoid repeating the same code?",
+        answers: ["a string","a for loop","a function","an array","an object"],
+        correctanswer: "a function"
     },
     {
-        question:"Who is having a baby girl in May?",
-        answers: ["Rafa Crespo","Rachael Holmes","Mohak Schroff","John Doe","Brian Oldak"],
-        correctanswer: "Brian Oldak"
+        question:"Which math operation would you use to subtract from a time interval?",
+        answers: ["-+","=-=","-","--","-="],
+        correctanswer: "-="
     },
     {
-        question:"Where is Adjoa going in December?",
-        answers: ["Sierra Leone","California","Portugal","Barcelona","Ghana"],
-        correctanswer: "Ghana"
+        question:"Which is NOT a comparison JavaScript operator?",
+        answers: ["<","!==","+=","===","=="],
+        correctanswer: "+="
     },
 ] 
 var score = 0
@@ -62,7 +62,7 @@ answer3Btn.style.visibility="hidden"
 var answer4Btn = document.querySelector("#answer-4")
 answer4Btn.addEventListener("click",showCorrectAnswer)
 answer4Btn.style.visibility="hidden"
-var timeLeft = 30
+var timeLeft = 20
 var timerEl = document.querySelector("#timer")
 timerEl.textContent = timeLeft
 
@@ -112,7 +112,7 @@ function showCorrectAnswer () {
     else {
     document.querySelector("#question-response").innerHTML = "Wrong Answer!"
     //subtracting 10 seconds from timer her if the user selects a wrong answer. I saw some examples of let vs var which was confusing. Haven't used let before and was wondering if I could use it in for this situation (subtracting time)
-    timeLeft -= 10
+    timeLeft -= 5
 }
 questionindex++;
 // alert ("stop")
@@ -178,10 +178,12 @@ function saveScore () {
         score: score
     })
     localStorage.setItem("score",JSON.stringify(savedscore));
-    showHighScore ()
+    showHighScores ()
+    var playerScore = document.querySelector("#player-score")
+    playerScore.textContent = initials + " : " + score
 }
-
-function showHighScore () {
+//I had help from my TA on the code above starting on line 180 
+function showHighScores () {
     var showHighScore = document.querySelector("#highscore-table")
     var savedscore = localStorage.getItem("score")
     if (savedscore) {
@@ -193,9 +195,10 @@ function showHighScore () {
         var contentHolder = document.createElement("div")
         contentHolder.textContent = savedscore[i].initials + ":" + savedscore[i].score
         showHighScore.appendChild(contentHolder)
-
+//I had help from my instructor on the code above starting on line 188 
     }
-
+    scorePage.style.visibility="visible"
+    // var playerScore = document.getElementById("#player-score")
 }
 
 // Give the player the ability to enter their initials, then save them to localstorage along with the score from the game over screen. You should save the data in a format that allows multiple high scores to be saved.

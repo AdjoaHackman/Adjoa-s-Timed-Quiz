@@ -1,22 +1,19 @@
-## Challenge #4 - Timed Quiz
+## Challenge #4 - Adjoa's Timed Quiz
 
 ## Description
+The goal of this assignment was to create a timed quiz. I started this assignment my trying to pseudo-coding the steps (line 244) and then write dummy questions with the answers, along with the correct answer. As you can see in my commits, I added some Beyonce questions just to have something ready. 
+
+My thoughts on this quiz were: I needed to create an array of questions, answers and correct answers and then validate the correct answer and then removes time if the answer selected is wrong. When the user goes through all of the questions, the score page appears automatically and asks them to enter in their initials. Once they enter their initials, the user presses submit (onclick) their scores appear along with their initials. The scores will be saved and appear after the user takes the quiz repeatedly. I added a lot of variables under the array of questions for the answers, questions, initials and score page. 
+
+I am working on trying to make my code more readable because I am noticing how difficult it can be to find variables and functions, especially if there is a lot of code to write. 
+
+I am also trying to re-use code so that I don't have to keep typing out new code.I did this a lot when trying to hide the Answer buttons and the Take Quiz button. During a tutoring session last week, my tutor suggested that I use the code from one of our activities for the timer, which was very helpful. I added a few functions - endgame and showNextQuestion - to the timer so that the timer will stop when the users time runs out/chooses too many wrong answers or shows the next question as the timer continues. 
 
 ## What did I Learn?
+Do one thing at a time. I had to figure out the questions first and then figure out the timer and then figure out the score page. One step at a time. It is difficult for me because I am so focused on getting to the finished product.
+
+I am learning a lot more about JavaScript syntax and how complex it is. I really need more practice. It is getting easier knowing when to use parenthesis and that empty parenthesis calls a function but I am so confused on where to put variables (as you can probably tell in my commented out code). There are also some parts of the code like textcontent and for loops that I will threw me off this time for some reason. I think it was because there were so many more steps for this assignment - a quiz actually has many components in terms of the time, score, etc. and I had to account for all of them.
 
 ## Credits
+As always my Instructor and TA are the bomb.com. I have the best mentors in the world - Brian and Jefferson - who I could not finish any of these assignments (or this bootcamp) without their help and patience. I also want to thank the people on Stack Overflow who asked the same questions I asked and the people who answered their questions. Special thanks to W3 Schools, MDN Web Docs and Javascript.info.
 
-Directions
-This project is about creating a quiz game. You will need to do the following:
-
-* Have a list of questions for the player. Each question should have at least 4 answers with one being correct. Have at least 2 questions, though more is encouraged!
-* When the user clicks the start button, show them the first question.
-* As the user answers questions, move them to the next question until all questions are out.
-* When no more questions are left, Show the game over screen.
-* Add in a timer. The timer should start as soon as the start button is clicked, and tick down each second. It should show in the top right corner of the page.
-* When the user choses an incorrect answer, take some time off the timer. How much is up to you.
-* When the timer reaches 0, show the game over screen.
-* Show the last timer value as the player's score on the game over screen.
-* Give the player the ability to enter their initials, then save them to localstorage along with the score from the game over screen. You should save the data in a format that allows multiple high scores to be saved.
-* Once the player saves their highscore, show the highscores as a list on the page
-* Add a link to the top left corner. When clicked, go directly to the highscore list.# Adjoa-s-Timed-Quiz
