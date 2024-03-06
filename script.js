@@ -111,7 +111,7 @@ function showCorrectAnswer () {
 }
     else {
     document.querySelector("#question-response").innerHTML = "Wrong Answer!"
-    //subtracting 5 seconds from timer her if the user selects a wrong answer. I saw some examples of let vs var which was confusing. Haven't used let before and was wondering if I could use it in for this situation (subtracting time)
+    //subtracting 10 seconds from timer her if the user selects a wrong answer. I saw some examples of let vs var which was confusing. Haven't used let before and was wondering if I could use it in for this situation (subtracting time)
     timeLeft -= 10
 }
 questionindex++;
@@ -161,13 +161,41 @@ function endGame () {
     quizWrapper.innerHTML=""
     initialsPage.style.visibility="visible"
     quizWrapper.style.visibility="hidden"
-    submitBtn.onclick = saveScore()
+    submitBtn.onclick = saveScore
 
 }
 
 function saveScore () {
-    localStorage.setItem("score","50");
-    localStorage.getItem("score")
+    var savedscore = localStorage.getItem("score")
+    if (savedscore) {
+        savedscore = JSON.parse(savedscore)
+    }else {
+        savedscore = []
+    } 
+    var initials = document.querySelector("#initials").value
+    savedscore.push({
+        initials: initials,
+        score: score
+    })
+    localStorage.setItem("score",JSON.stringify(savedscore));
+    showHighScore ()
+}
+
+function showHighScore () {
+    var showHighScore = document.querySelector("#highscore-table")
+    var savedscore = localStorage.getItem("score")
+    if (savedscore) {
+        savedscore = JSON.parse(savedscore)
+    }else {
+        savedscore = []
+    } 
+    for (var i=0; i<savedscore.length; i++) {
+        var contentHolder = document.createElement("div")
+        contentHolder.textContent = savedscore[i].initials + ":" + savedscore[i].score
+        showHighScore.appendChild(contentHolder)
+
+    }
+
 }
 
 // Give the player the ability to enter their initials, then save them to localstorage along with the score from the game over screen. You should save the data in a format that allows multiple high scores to be saved.
